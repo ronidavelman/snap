@@ -1,0 +1,13 @@
+.urlErrorExample{
+  text-decoration: underline;
+}
+.urlError{
+  color:red;
+}
+.selectedSize{
+  border: 1px solid grey;
+}
+.sizeBox{
+  display:inline-block;
+  cursor:pointer;
+}

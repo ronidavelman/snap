@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="Lib/angular-a.js"></script>
+    <script src="Lib/b-jquery.js"></script>
+    <script src="Lib/ngCookies.js"></script>
+    <script src="app.js"></script>
+    <script src="Modules/HomeMod/HomeCtrl.js"></script>
+    <script src="Modules/HomeMod/HomeService.js"></script>
+    <link rel="stylesheet" href="Modules/HomeMod/Home.css" />
+  </head>
+  <body ng-app="SnapApp">
+    <div ng-controller="HomeCtrl">
+      <input type="text" ng-model="input.url" />
+      <div ng-click="input.submit()">Snap</div>
+
+      <div class="sizeBox" ng-class="{'selectedSize':input.size=='iphone4'}" ng-click="input.size='iphone4'">
+        Iphone4
+      </div>
+      <div class="sizeBox" ng-class="{'selectedSize':input.size=='iphone5'}" ng-click="input.size='iphone5'">
+        Iphone5
+      </div>
+
+      <p class="urlError" ng-show="input.urlError">The url you entered is not valid. Try something like: <span class="urlErrorExample" ng-click="exampleUrl('google.com')">google.com</span></p>
+    </div>
+  </body>
+</html>
